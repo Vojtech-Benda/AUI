@@ -1,3 +1,4 @@
 *.html
 .venv/
 *.md
+*.code-workspace
