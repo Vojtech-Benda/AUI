@@ -24,10 +24,10 @@ end
 
 % 5. prumerna hodnota amplitudy peaku 
 if numel(locs)>=1
-        GSR_average_peak_amplitude_5=mean(pks);
+    GSR_average_peak_amplitude_5=mean(pks);
 else
 
-GSR_average_peak_amplitude_5=0;
+    GSR_average_peak_amplitude_5=0;
 end
 
 % 6. suma amplitud peaku 
