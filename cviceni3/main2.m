@@ -3,7 +3,7 @@ clear;
 close all;
 
 %% Problem Definition
-img= double(imread('test.jpg'));
+img= imread('cviceni3/calc.jpg');
 [s1,s2,s3]=size(img);
 Rplane = img(:,:,1);
 Gplane = img(:,:,2);
@@ -21,8 +21,8 @@ VarSize=[k size(X,2)];  % Decision Variables Matrix Size = [4 3]
 
 nVar=prod(VarSize);     % Number of Decision Variables = 12
 
-VarMin= repmat(min(X),1,k);      % Lower Bound of Variables [4x1] of[1x3] = [4x3]
-VarMax= repmat(max(X),1,k);      % Upper Bound of Variables [4x1] of[1x3] = [4x3]
+VarMin= double(repmat(min(X),1,k));      % Lower Bound of Variables [4x1] of[1x3] = [4x3]
+VarMax= double(repmat(max(X),1,k));      % Upper Bound of Variables [4x1] of[1x3] = [4x3]
 
 ga_opts = optimoptions('particleswarm','display','iter','MaxTime',600,'MaxIterations',20);
 [centers, err_ga] = particleswarm(CostFunction, nVar,VarMin,VarMax,ga_opts);

@@ -12,5 +12,8 @@ function [z] = ClusteringCost2(m, X)
     WCD = sum(dmin); 
     
     z=WCD; % fitness function contain sum of each data point to their corresponding center value set (aim to get it minimum)    
-    % z = [1 x 1]     
+    % z = [1 x 1]    
+
+
+    
 end
